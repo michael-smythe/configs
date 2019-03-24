@@ -1,0 +1,14 @@
+# Baseline setup
+1. Install baseline manjaro package
+2. install the following list of packages
+
+```
+pacman -Syu transset-df
+```
+
+3. copy config files to their proper locations
+cp inputrc /etc/inputrc
+cp bashrc 
+
+4. reboot the vm
+reboot
