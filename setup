@@ -3,7 +3,7 @@
 2. install the following list of packages
 
 ```
-pacman -Syu transset-df
+pacman -Syu transset-df xclip firefox
 ```
 
 3. copy config files to their proper locations
