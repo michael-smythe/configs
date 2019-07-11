@@ -3,12 +3,26 @@
 2. install the following list of packages
 
 ```
-pacman -Syu transset-df xclip firefox
+pacman -Syu linux419-headers
+pacman -Syu transset-df xclip firefox wireguard-tools wireguard-dkms tcpdump wireshark code
+install_pulse
 ```
 
 3. copy config files to their proper locations
+```
 cp inputrc /etc/inputrc
-cp bashrc 
+cp bashrc /root/.bashr
+cp ssh_config /etc/ssh/ssh_config
+cp conky.conf /usr/share/conky/conky_maia
+cp conky_shortcuts.conf /usr/share/conky/conky1.10_shortcuts_maia
+cp i3_config /root/.i3/config
+```
+# note conky -c <config to run> & does work with the current configs listed may just want to incorporate into setup script
 
-4. reboot the vm
+
+4. Setting up wireguard
+wg genkey | tee server_private_key | wg pubkey > server_public_key
+wg genkey | tee client_private_key | wg pubkey > client_public_key
+
+5. reboot the vm
 reboot
